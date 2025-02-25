@@ -12,6 +12,13 @@ DOMAIN-SUFFIX,ipv6.msftconnecttest.com
 DOMAIN-KEYWORD,mirror
 DOMAIN-KEYWORD,ghp
 
+# 科研期刊
+DOMAIN-SUFFIX,webofscience.clarivate.cn
+DOMAIN-SUFFIX,sciencedirect.com
+DOMAIN-SUFFIX,wanfangdata.com.cn
+DOMAIN-SUFFIX,engineeringvillage.com
+DOMAIN-SUFFIX,x-mol.com
+DOMAIN-SUFFIX,cnki.net
 
 # 360
 DOMAIN-SUFFIX,360.com

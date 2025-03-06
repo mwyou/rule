@@ -1,7 +1,16 @@
 # 科研期刊
-DOMAIN-SUFFIX,webofscience.clarivate.cn
-DOMAIN-SUFFIX,sciencedirect.com
-DOMAIN-SUFFIX,wanfangdata.com.cn
-DOMAIN-SUFFIX,engineeringvillage.com
-DOMAIN-SUFFIX,x-mol.com
-DOMAIN-SUFFIX,cnki.net
+# DOMAIN-SUFFIX,webofscience.clarivate.cn
+# DOMAIN-SUFFIX,sciencedirect.com
+# DOMAIN-SUFFIX,wanfangdata.com.cn
+# DOMAIN-SUFFIX,engineeringvillage.com
+# DOMAIN-SUFFIX,x-mol.com
+# DOMAIN-SUFFIX,cnki.net
+
+DOMAIN-KEYWORD,webofscience
+DOMAIN-KEYWORD,webofknowledge
+DOMAIN-KEYWORD,sciencedirect
+DOMAIN-KEYWORD,wanfangdata
+DOMAIN-KEYWORD,engineeringvillage
+DOMAIN-KEYWORD,x-mol
+DOMAIN-KEYWORD,cnki
+DOMAIN-KEYWORD,clarivate

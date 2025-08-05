@@ -1,3 +1,21 @@
+src/gz immortalwrt_core https://mirrors.vsean.net/openwrt/releases/24.10.1/targets/x86/64/packages
+src/gz immortalwrt_base https://mirrors.vsean.net/openwrt/releases/24.10.1/packages/x86_64/base
+src/gz immortalwrt_easytier https://mirrors.vsean.net/openwrt/releases/24.10.1/packages/x86_64/easytier
+src/gz immortalwrt_luci https://mirrors.vsean.net/openwrt/releases/24.10.1/packages/x86_64/luci
+src/gz immortalwrt_packages https://mirrors.vsean.net/openwrt/releases/24.10.1/packages/x86_64/packages
+src/gz immortalwrt_routing https://mirrors.vsean.net/openwrt/releases/24.10.1/packages/x86_64/routing
+src/gz immortalwrt_sundaqiang https://mirrors.vsean.net/openwrt/releases/24.10.1/packages/x86_64/sundaqiang
+src/gz immortalwrt_telephony https://mirrors.vsean.net/openwrt/releases/24.10.1/packages/x86_64/telephony
+
+src-git packages https://github.com/immortalwrt/packages.git^91619482df935954227e1fc12444fdb306bab585
+src-git luci https://github.com/immortalwrt/luci.git^401c185da643f376e9a2d2a6970b43ed9416560c
+src-git routing https://github.com/openwrt/routing.git^c9b636698881059a3c981032770968f5a98ff201
+src-git telephony https://github.com/openwrt/telephony.git^fd605af7143165a2490681ec1752f259873b9147
+src-git sundaqiang https://github.com/sundaqiang/openwrt-packages.git
+# src-git tailscale_luci https://github.com/asvow/luci-app-tailscale.git
+#src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main
+src-git easytier https://github.com/EasyTier/luci-app-easytier
+
 #科学插件调整
 CONFIG_PACKAGE_luci-app-openclash=y
 #增加插件

@@ -100,6 +100,7 @@ proxy-groups:
   - {name: 🐟 漏网之鱼, <<: *pr}
 
 rules:
+  - RULE-SET,private_domain,🟢 直连
   - RULE-SET,youtube,📹 YouTube
   - RULE-SET,google,🍀 Google
   - RULE-SET,github,👨🏿‍💻 GitHub

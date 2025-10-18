@@ -1,6 +1,6 @@
 proxy-providers:
   Airport1:
-    url: "https://ktmcloud.ink/api/v1/client/subscribe?token=d34c580036d0ca04325a4a7729870eb3"
+    url: "你的订阅链接"
     type: http
     interval: 86400
     health-check:

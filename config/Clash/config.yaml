@@ -86,7 +86,7 @@ dns:
     - 223.5.5.5
     - 119.29.29.29
   
-pr: &pr {type: select, proxies: [🚀 节点选择,📹 YouTube,🍀 Google,👨🏿‍💻 GitHub,🤖 OpenAI,🎥 NETFLIX,📲 Telegram,🎵 TikTok,🟢 直连]}
+pr: &pr {type: select, proxies: [🚀 节点选择,🟢 直连]}
 
 proxy-groups:
   - {name: 🚀 节点选择, type: select, include-all: true, filter: "(?i)新加坡|sg|日本|jp"}

@@ -97,6 +97,7 @@ proxy-groups:
   - {name: 🎥 NETFLIX, type: select, include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
   - {name: 📲 Telegram, type: select, include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
   - {name: 🎵 TikTok, type: select, include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+  - {name: 🐳 Docker, type: select, include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
   - {name: 🐟 漏网之鱼, <<: *pr}
 
 rules:
@@ -109,6 +110,7 @@ rules:
   - RULE-SET,netflix,🎥 NETFLIX
   - RULE-SET,telegram,📲 Telegram
   - RULE-SET,tiktok,🎵 TikTok
+  - RULE-SET,docker,🐳 Docker
   - MATCH,🐟 漏网之鱼
   
 rule-anchor:
@@ -126,3 +128,4 @@ rule-providers:
   netflix: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs" }
   telegram: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs" }
   tiktok: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs" }
+  docker: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/docker.mrs" }

@@ -1,0 +1,61 @@
+proxy-providers:
+  Airport_01:
+    type: http
+    interval: 1800
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+    proxy: 🟢 直连
+    url: "订阅链接1"
+  Airport_02:
+    type: http
+    interval: 1800
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+    proxy: 🟢 直连
+    url: "订阅链接2"
+
+proxies:
+- name: "🟢 直连"
+  type: direct
+  udp: true
+
+pr: &pr {type: select, proxies: [🚀 节点选择,📹 YouTube,🍀 Google,👨🏿‍💻 GitHub,🤖 OpenAI,🎥 NETFLIX,📲 Telegram,🎵 TikTok,🟢 直连]}
+
+proxy-groups:
+  - {name: 🚀 节点选择, type: select, include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+  - {name: 📹 YouTube, type: select, include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+  - {name: 🍀 Google, type: select, include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+  - {name: 👨🏿‍💻 GitHub, type: select, include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+  - {name: 🤖 OpenAI, type: select, include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+  - {name: 🎥 NETFLIX, type: select, include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+  - {name: 📲 Telegram, type: select, include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+  - {name: 🎵 TikTok, type: select, include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+  - {name: 🐟 漏网之鱼, <<: *pr}
+
+rules:
+  - RULE-SET,youtube,📹 YouTube
+  - RULE-SET,google,🍀 Google
+  - RULE-SET,github,👨🏿‍💻 GitHub
+  - RULE-SET,openai,🤖 OpenAI
+  - RULE-SET,netflix,🎥 NETFLIX
+  - RULE-SET,telegram,📲 Telegram
+  - RULE-SET,tiktok,🎵 TikTok
+  - MATCH,🐟 漏网之鱼
+  
+rule-anchor:
+  ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
+  domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
+  class: &class {type: http, interval: 86400, behavior: classical, format: text}
+
+rule-providers:
+  youtube: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs" }
+  google: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs" }
+  github: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs" }
+  openai: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/openai.mrs" }
+  netflix: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs" }
+  telegram: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs" }
+  tiktok: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs" }

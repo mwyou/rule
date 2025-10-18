@@ -86,10 +86,10 @@ dns:
     - 223.5.5.5
     - 119.29.29.29
   
-pr: &pr {type: select, proxies: [🚀 节点选择,🟢 直连]}
+pr: &pr {type: select, proxies: [🟢 直连,🚀 节点选择]}
 
 proxy-groups:
-  - {name: 🚀 节点选择, type: select, proxies: [🟢 直连], include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+  - {name: 🚀 节点选择, type: select, include-all: true, filter: "(?i)新加坡|sg|日本|jp", proxies: [🟢 直连]}
   - {name: 📹 YouTube, type: select, proxies: [🚀 节点选择, 🟢 直连], include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
   - {name: 🍀 Google, type: select, proxies: [🚀 节点选择, 🟢 直连], include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
   - {name: 👨🏿‍💻 GitHub, type: select, proxies: [🚀 节点选择, 🟢 直连], include-all: true, filter: "(?i)新加坡|sg|日本|jp"}

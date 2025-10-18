@@ -86,20 +86,20 @@ dns:
     - 223.5.5.5
     - 119.29.29.29
   
-pr: &pr {type: select, proxies: [🚀 节点选择, 🟢 直连], include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+pr: &pr {type: select, proxies: [🚀 节点选择,🟢 直连]}
 
 proxy-groups:
-  - {name: 🚀 节点选择, <<: *pr}
-  - {name: 📹 YouTube, <<: *pr}
-  - {name: 🍀 Google, <<: *pr}
-  - {name: 👨🏿‍💻 GitHub, <<: *pr}
-  - {name: 🤖 OpenAI, <<: *pr}
-  - {name: 🎥 NETFLIX, <<: *pr}
-  - {name: 📲 Telegram, <<: *pr}
-  - {name: 🎵 TikTok, <<: *pr}
-  - {name: 🐳 Docker, <<: *pr}
+  - {name: 🚀 节点选择, type: select, proxies: [🟢 直连], include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+  - {name: 📹 YouTube, type: select, proxies: [🚀 节点选择, 🟢 直连], include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+  - {name: 🍀 Google, type: select, proxies: [🚀 节点选择, 🟢 直连], include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+  - {name: 👨🏿‍💻 GitHub, type: select, proxies: [🚀 节点选择, 🟢 直连], include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+  - {name: 🤖 OpenAI, type: select, proxies: [🚀 节点选择, 🟢 直连], include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+  - {name: 🎥 NETFLIX, type: select, proxies: [🚀 节点选择, 🟢 直连], include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+  - {name: 📲 Telegram, type: select, proxies: [🚀 节点选择, 🟢 直连], include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+  - {name: 🎵 TikTok, type: select, proxies: [🚀 节点选择, 🟢 直连], include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
+  - {name: 🐳 Docker, type: select, proxies: [🚀 节点选择, 🟢 直连], include-all: true, filter: "(?i)新加坡|sg|日本|jp"}
   - {name: 🐟 漏网之鱼, <<: *pr}
-
+  
 rules:
   - RULE-SET,private_domain,🟢 直连
   - RULE-SET,cn_domain,🟢 直连

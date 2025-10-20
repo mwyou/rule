@@ -106,6 +106,24 @@ proxy-groups:
   - {name: 🐟 Others,       <<: *pr}
   
 rules:
+  - RULE-SET,elsevier,🟢 直连
+  - RULE-SET,springer,🟢 直连
+  - RULE-SET,wiley,🟢 直连
+  - RULE-SET,ieee,🟢 直连
+  - RULE-SET,nature,🟢 直连
+  - RULE-SET,sciencedirect,🟢 直连
+  - RULE-SET,acs,🟢 直连
+  - RULE-SET,oup,🟢 直连
+  - RULE-SET,scopus,🟢 直连
+  - RULE-SET,taylor,🟢 直连
+  - RULE-SET,cell,🟢 直连
+  - RULE-SET,science,🟢 直连
+  - RULE-SET,pnas,🟢 直连
+  - RULE-SET,cambridge,🟢 直连
+  - RULE-SET,sage,🟢 直连
+  - RULE-SET,jstor,🟢 直连
+  - RULE-SET,pubmed,🟢 直连
+  - RULE-SET,webofscience,🟢 直连
   - RULE-SET,private,🟢 直连
   - RULE-SET,private_ip,🟢 直连,no-resolve
   - RULE-SET,proxylite,🚀 Proxy Select
@@ -143,6 +161,25 @@ rule-anchor:
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 
 rule-providers:
+  elsevier:           { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/elsevier.mrs" }
+  springer:           { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/springer.mrs" }
+  wiley:              { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/wiley.mrs" }
+  ieee:               { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ieee.mrs" }
+  nature:             { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/nature.mrs" }
+  sciencedirect:      { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/sciencedirect.mrs" }
+  acs:                { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/acs.mrs" }
+  oup:                { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/oup.mrs" }
+  scopus:             { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/scopus.mrs" }
+  taylor:             { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/taylor.mrs" }
+  cell:               { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cell.mrs" }
+  science:            { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/science.mrs" }
+  pnas:               { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/pnas.mrs" }
+  cambridge:          { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cambridge.mrs" }
+  sage:               { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/sage.mrs" }
+  jstor:              { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/jstor.mrs" }
+  pubmed:             { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/pubmed.mrs" }
+  webofscience:       { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/webofscience.mrs" }
+
   private:            { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs" }
   private_ip:         { <<: *ip,     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.mrs" }
   
